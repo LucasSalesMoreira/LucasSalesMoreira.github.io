@@ -16,7 +16,7 @@ const IMG_FOLDER_NAME = 'img-compacted'
 
 const song = new Audio('./audio/mixkit-game-level-music-689.wav')
 
-canvas.addEventListener('click', () => {
+const jump = () => {
     song.play()
 
     if (jumpIntervalId == null && !gravityAvailable) {
@@ -31,7 +31,9 @@ canvas.addEventListener('click', () => {
         jumpIntervalId = null
         gravityAvailable = true
     }, 500)
-})
+}
+
+canvas.addEventListener('click', () => jump())
 
 const player = {
     x: 400,
