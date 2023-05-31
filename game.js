@@ -112,7 +112,7 @@ const loadCloudImage = () => {
         cloud.image = image
         cloudLoadCompleted = true
     }
-    image.src = './${IMG_FOLDER_NAME}/cloud_2.png'
+    image.src = './img/cloud_2.png'
 }
 
 const renderObstacle = () => {
