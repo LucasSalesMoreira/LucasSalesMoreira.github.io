@@ -12,6 +12,7 @@ const MAX_VELOCITY = 26
 const MAX_COLISIONS = 3
 let playerLoadCompleted = false
 let cloudLoadCompleted = false
+const IMG_FOLDER_NAME = 'img-compacted'
 
 const song = new Audio('./audio/mixkit-game-level-music-689.wav')
 
@@ -101,7 +102,7 @@ const loadPlayerImages = () => {
                 console.log(player.images.map((item) => item.src))
             }
         }
-        image.src = `./img/frame_${i}.png`
+        image.src = `./${IMG_FOLDER_NAME}/frame_${i}.png`
     }
 }
 
@@ -111,7 +112,7 @@ const loadCloudImage = () => {
         cloud.image = image
         cloudLoadCompleted = true
     }
-    image.src = './img/cloud_2.png'
+    image.src = './${IMG_FOLDER_NAME}/cloud_2.png'
 }
 
 const renderObstacle = () => {
